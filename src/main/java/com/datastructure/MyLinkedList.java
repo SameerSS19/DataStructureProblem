@@ -9,6 +9,7 @@ public class MyLinkedList<T> {
         this.tail = null;
     }
 
+    /* Add First */
     public void addFirst(INode newNode) {
         if (this.tail == null) {
             this.tail = newNode;
@@ -19,6 +20,19 @@ public class MyLinkedList<T> {
             INode tempNode = this.head;
             this.head = newNode;
             this.head.setNext(tempNode);
+        }
+    }
+
+    /* Add Last */
+    public void addLast(INode newNode) {
+        if (this.head == null) {
+            this.head = newNode;
+        }
+        if (tail == null) {
+            tail = newNode;
+        } else {
+            this.tail.setNext(newNode);
+            tail = newNode;
         }
     }
 
@@ -36,5 +50,4 @@ public class MyLinkedList<T> {
         System.out.println(displayNode);
 
     }
-
 }

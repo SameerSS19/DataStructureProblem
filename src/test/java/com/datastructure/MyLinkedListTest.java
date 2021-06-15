@@ -19,4 +19,20 @@ public class MyLinkedListTest {
                 && myLinkedList.tail.equals(myFirstNode));
         Assert.assertEquals(true, result);
     }
+
+    /* Created Simple Linked List and Added to the Last Position */
+    @Test
+    public void GivenThreeNumbersWhenAddedToLinkedListShouldAddedtoBottom() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+        myLinkedList.addLast(myFirstNode);
+        myLinkedList.addLast(mySecondNode);
+        myLinkedList.addLast(myThirdNode);
+        myLinkedList.printMyNodes();
+        boolean result = (myLinkedList.head.equals(myFirstNode) && myLinkedList.head.getNext().equals(mySecondNode)
+                && myLinkedList.tail.equals(myThirdNode));
+        Assert.assertEquals(true, result);
+    }
 }
