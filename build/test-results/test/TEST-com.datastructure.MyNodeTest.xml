@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.datastructure.MyNodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-06-15T17:17:12" hostname="Sam" time="0.014">
+  <properties/>
+  <testcase name="givenCallShouldPrintWelcomeMessage" classname="com.datastructure.MyNodeTest" time="0.012"/>
+  <testcase name="GivenThreeNumbersWhenLinkedShouldPassLinkedListTest" classname="com.datastructure.MyNodeTest" time="0.001"/>
+  <system-out><![CDATA[Welcome to the Data Structure Problem
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
