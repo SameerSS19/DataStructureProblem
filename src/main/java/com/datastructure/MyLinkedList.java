@@ -59,4 +59,15 @@ public class MyLinkedList<T> {
         return tempNode;
     }
 
+    /* Search Node with given key */
+    public INode searchNode(T key) {
+        INode tempNode = this.head;
+        while (tempNode != null) {
+            if (tempNode.getData() == key) {
+                return tempNode;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return null;
+    }
 }
