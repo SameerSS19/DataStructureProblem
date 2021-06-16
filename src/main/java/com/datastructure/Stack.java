@@ -12,4 +12,9 @@ public class Stack<T> {
     public INode peek() {
         return myLinkedList.head;
     }
+
+    /* pop operation in stack */
+    public INode pop() {
+        return myLinkedList.popFirst();
+    }
 }
