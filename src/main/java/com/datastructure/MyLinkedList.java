@@ -42,22 +42,21 @@ public class MyLinkedList<T> {
     }
 
     /* Delete/Pop First Node */
-    public void pop() {
+    public INode<T> popFirst() {
+        INode<T> tempNode = this.head;
         this.head = this.head.getNext();
+        return tempNode;
     }
 
-    public void printMyNodes() {
-        INode tempNode = this.head;
-        StringBuffer displayNode = new StringBuffer("My Nodes: ");
-        while (tempNode.getNext() != null) {
-            displayNode.append(tempNode.getData());
-            if (!tempNode.equals(this.tail)) {
-                displayNode.append("->");
-            }
+    /* Delete Pop Last Node */
+    public INode<T> popLast() {
+        INode<T> tempNode = head;
+        while (!(tempNode.getNext().equals(tail))) {
             tempNode = tempNode.getNext();
         }
-        displayNode.append(tempNode.getData());
-        System.out.println(displayNode);
-
+        this.tail = tempNode;
+        tempNode = tempNode.getNext();
+        return tempNode;
     }
+
 }
